@@ -1,0 +1,49 @@
+
+body{
+  background-color: darkcyan;
+  color: bisque;
+}
+
+#contenedor {
+  background-image: url("fondobar.jpg");
+ /* background-repeat: no-repeat;*/
+}
+
+#entrada_datos{
+  background-color: darkcyan;
+  width: 350px;
+  padding: 2%;  
+}
+
+#resultado{
+  background-color: darkcyan;
+}
+
+
+#listado{
+  background-color: brown;
+  padding: 1%;
+}
+
+table{
+  width: 100%;
+}
+
+#tblGraella{
+  background-color: aquamarine;
+  color: black;
+}
+
+#graella{
+  background-color: darkcyan;
+  padding: 1%;
+  width: 100%;
+  padding: 1%;
+}
+
+
+.boton{
+  width: 150px;
+  background-color: darkolivegreen;
+  color: bisque;
+}

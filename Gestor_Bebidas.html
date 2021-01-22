@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Bebidas</title>
+        <h1>BEBIDAS</h1>
+        <link rel="stylesheet" href="gestion.css">     
+
+    </head>
+
+    <body>
+        <div id="contenedor">
+
+            <div class="botones">
+               
+                <div id="entrada_datos">
+
+                   <table>
+                        <tr>
+                            <td>Codigo :</td>
+                            <td> <input type="text" id="txt_codigo" value = "000" required> </td>
+                        </tr>
+                       <tr>
+                           <td>Nombre :</td>
+                           <td> <input type="text" id="txt_nombre" value ="Sin asignar" required> </td>
+                       </tr>
+
+                       <tr>
+                           <td> Sabor :</td>
+                          
+                           <td>                            
+                                <select name="sabores" id="sabores">
+
+                                    <option value="Cola">Cola</option>
+                                    <option value="Naranja">Naranja</option>
+                                    <option value="Limon">Limon</option>
+                                    <option value="Cerveza">Cerveza</option>
+                                    <option value="Agua">Agua</option>
+                                    <option value="Vino Blanco">Vino Blanco</option>
+                                    <option value="Vino Negro">Vino Negro</option>
+                                    <option value="Chocolate">Chocolate</option>
+                                
+                                </select>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>Formato :</td>
+                            <td>
+                                <select name="formato" id="formato">
+                                
+                                    <option value="lata 33cc">lata 33cc</option>
+                                    <option value="Botellin">Botellin</option>
+                                    <option value="Botella litro">Botella litro</option>
+                                    <option value="Garrafa">Garrafa</option>
+                                    <option value="Mediana">Mediana</option>
+                                    <option value="Quinto">Quinto</option>
+                                    <option value="Copa">Copa</option>
+                                
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Con/Sin Alcohol : </td>
+                            <td>
+                                <select name="alcohol" id="alcohol">                                
+                                    <option value="Sin">Sin Alcohol</option>
+                                    <option value="Con">Con Alcohol</option>                                    
+                                
+                                </select>                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Stock :  </td>
+                            <td><input type="text" id="txt_stock" value = '0' required></td>
+                        </tr>
+                        <tr>
+                            <td>Precio Unitario :  </td>
+                            <td><input type="text" id="txt_precio" value = '0' required></td>
+                        </tr>
+                        <tr>
+                            <td>Proveedor :  </td>
+                            <td>
+                                <select name="proveedor" id="proveedor">
+                                
+                                    <option value="Nestle">Nestle</option>
+                                    <option value="Damm">Damm</option>
+                                    <option value="Danone">Danone</option>
+                                    <option value="Otro">Otro</option>
+                                    <option value="Pepsico">Pepsico</option>
+                                                                    
+                                </select>    
+                            </td>
+                        </tr>
+                   </table>
+
+                   <br><br><hr>
+
+                   <table id="botones">
+
+                    <tr>
+                        <td>  
+                            <input  class ="boton" type='button' name = alta        onclick=Altas()     id=alta         value='ALTAS'>
+                        </td>
+                        <td>
+                            <input  class ="boton" type='button' name = modificar   onclick=Modificar() id=modificar    value='MODIFICAR'>
+                        </td>                    
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input class ="boton" type='button' name = consulta    onclick=Consultas() id=consulta     value='CONSULTA'>
+                        </td>
+                        <td>
+                            <input class ="boton" type='button' name = baja        onclick=Bajas()     id=baja         value='BAJAS'>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input class ="boton" type='button' name = datos        onclick=Rellena()  id=datos         value='DATOS PRUEBA'>
+                         </td>
+                         <td>
+                            <input class ="boton"  type='button' name = subo        onclick=SuboPrecios()  id=subo         value='SUBIR PRECIOS'>
+                          </td>
+                    </tr>
+         
+                    <tr>
+                        <td>
+                            <input class ="boton" type='button' name = coste_global        onclick="Coste('global')";  id=coste_global         value='COSTE GLOBAL'>
+                         </td>
+                         <td>
+                            <input class ="boton" type='button' name = coste               onclick="Coste('articulo')"  id=coste         value='COSTE ARTICULO'>
+                          </td>
+                    </tr>
+         
+                   </table>
+                         
+                </div>               
+                <br><br><hr>
+
+            </div>
+
+            <div id="resultado" class="resultados">                     
+                <h3>INFORMACION SOBRE BEBIDAS</h3>   
+                <input  class ="boton"  type="button" id="lista" value="LISTADO" onclick="MuestraListado()">
+                <br><br>
+                <hr>
+            </div>
+
+            <div id="listado">                 
+             
+            </div>
+
+            <div>
+                <p id="entradas"></p>
+            </div>
+
+            <div id="tabla">
+                <input  class ="boton" type="button" value="TABLA" onclick="RellenaTabla()">
+              
+                <div id="graella"></div>
+            </div>
+    </div>
+
+        <!--FICHERO CON LA CLASE-->
+        <script src='Bebida.js' type='text/javascript'></script>
+        <!--FICHERO CON LA LOGICA PROGRAMA-->
+        <script src='Funciones.js' type='text/javascript'></script>
+
+    </body>
+</html>
